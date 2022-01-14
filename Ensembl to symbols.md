@@ -1,8 +1,6 @@
-You may have your gene expression data in form of a table with one column with Ensemble IDs (such as ENSG00000164850), as shown below.
+## Annotate Ensembl ids with gene symbols
 
-Here image should come 
-
-However, these are not very useful when you are interested in knowing which genes are differentially modulated. So, one can annotate the data using the gene symbols using the following commands. Note that this will require the R packages: annotables and tidyverse. The following example considers the gene expression data as a tab delimited text file.
+You may have your gene expression data in form of a table with one column with Ensemble IDs (such as ENSG00000164850), as shown below. However, these are not very useful when you are interested in knowing which genes are differentially modulated. So, one can annotate the data using the gene symbols using the following commands. Note that this will require the R packages: **annotables** and **tidyverse**. The following example considers the gene expression data as a tab delimited text file.
 
 ### Get the requisite libraries
 ```
