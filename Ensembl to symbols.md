@@ -8,7 +8,7 @@ library(annotables)
 library(tidyverse) 
 ```
 
-### Read and view the data with Ensemble IDs in RStudio with the following commands 
+### Read and view the data 
 ```
 raw_countdata <- read.table(file.choose(), header=TRUE, sep="\t")
 View(raw_countdata)
