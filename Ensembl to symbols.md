@@ -20,10 +20,10 @@ In this example you can see that the there are a total of 9 columns. The first c
 names(raw_countdata)[1] = "ensgene"
 ```
 The annotables package contains a data frame which contains the annotations for each Ensemble ids based on the human genome build 38. You can view that data frame by
-
+```
 View(grch38)
-
+```
 Now we can merge our raw count data table with the desired colmns from the grch38 file such that the Ensemble ids are matched. This can be done with the following commands
-
+```
 annot_raw_countdata <- left_join(x=raw_countdata, y=grch38[,c("ensgene","symbol","description")], by="ensgene")
-
+```
