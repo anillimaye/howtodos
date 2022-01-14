@@ -4,9 +4,11 @@ Here image should come
 
 However, these are not very useful when you are interested in knowing which genes are differentially modulated. So, one can annotate the data using the gene symbols using the following commands. Note that this will require the R packages: annotables and tidyverse. The following example considers the gene expression data as a tab delimited text file.
 
-get the requisite libraries
+### Get the requisite libraries
+```
 library(annotables)
 library(tidyverse) 
+```
 
 Read and view the data with Ensemble IDs in RStudio with the following commands 
 
