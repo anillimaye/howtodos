@@ -13,15 +13,15 @@ library(tidyverse)
 raw_countdata <- read.table(file.choose(), header=TRUE, sep="\t")
 View(raw_countdata)
 ```
-In this example you can see that the there are a total of 9 columns. The first column contains the Ensembl ids and the column header is "Geneid". The other columns are expression data for samples A1, A2, A3... etc. Change the header from "Geneid" to "ensemble"
+The first column in "raw_countdata" contains the Ensembl ids and the column header is "Geneid". The other columns are expression data for samples. Change the header from "Geneid" to "ensemble"
 ```
 names(raw_countdata)[1] = "ensgene"
 ```
-The annotables package contains a data frame which contains the annotations for each Ensemble ids based on the human genome build 38. You can view that data frame by
+The annotables package contains a data frame which contains the annotations for each Ensemble ids based on the human genome build 38. If you want you can view that data frame with
 ```
 View(grch38)
 ```
-Now we can merge our raw count data table with the desired colmns from the grch38 file such that the Ensemble ids are matched. This can be done with the following commands
+Now we can merge our raw count data table with the desired colmns from the grch38 file such that the Ensemble ids are matched. In the following command we are choosing to include teh **symbol** and **description** corresponding to the Ensembl ids. This can be done with the following commands
 ```
 annot_raw_countdata <- left_join(x=raw_countdata, y=grch38[,c("ensgene","symbol","description")], by="ensgene")
 ```
